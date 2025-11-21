@@ -52,6 +52,7 @@ El programa no verifica que los índices ingresados estén entre 1 y 6 ni que no
 → Razón: por limitaciones de tiempo y alcance del curso, no se implementó validación completa.
 Límite fijo de 10 jugadores sin reinicio:
 Tras 10 jugadores, el programa no permite nuevos registros. No se implementó un sistema cíclico ni de archivo para extenderlo.
+
 3. Desarrollo del proyecto
 Mejoras sugeridas por el docente
 Durante una revisión intermedia, un docente del curso nos recomendó explícitamente enriquecer el proyecto con:
@@ -87,37 +88,42 @@ Utilización de Inteligencia Artificial
 La IA fue una herramienta de apoyo pedagógico, no un generador automático de soluciones. Su uso incluyó:
 
 Explicación de gettimeofday():
-Nos ayudó a comprender cómo usar esta función y cómo convertir microsegundos a segundos de forma legible.
+-Nos ayudó a comprender cómo usar esta función y cómo convertir microsegundos a segundos de forma legible.
+
 Corrección de lógica de índices:
 Verificamos con IA las secuencias correctas de índices para cada nivel, evitando errores en las claves de evaluación.
+
 Detección de inconsistencias:
 La IA nos alertó sobre la contradicción entre las reglas (“ascendente”) y la lógica real del juego (“descendente”).
+
 Redacción del documento:
 Nos asistió en estructurar el informe con claridad, coherencia y lenguaje técnico adecuado.
-Ética del uso:
 
+Ética del uso:
 No copiamos código. Cada línea fue escrita, probada y entendida por nosotros. La IA fue un tutor virtual que respondía preguntas, no un sustituto del pensamiento crítico. 
 
 Beneficios del uso de IA:
 
-Reducción del tiempo de investigación técnica.
-Refuerzo conceptual inmediato.
-Mayor precisión en la documentación.
-Mejor preparación para la defensa oral.
+-Reducción del tiempo de investigación técnica.
+-Refuerzo conceptual inmediato.
+-Mayor precisión en la documentación.
+-Mejor preparación para la defensa oral.
+
 4. Conclusiones
 El desarrollo de “Orden Correcto” superó nuestras expectativas iniciales, especialmente gracias a la retroalimentación docente y al enfoque iterativo basado en prueba y error.
 Aprendimos que el software no se construye de forma lineal, sino mediante ciclos constantes de implementación, fallo, análisis y mejora.
 
 Los aprendizajes más significativos fueron:
 
-Cómo medir el tiempo de ejecución con precisión en C++.
-Cómo diseñar un sistema de historial simple usando arreglos paralelos.
-La importancia de validar no solo el código, sino también la experiencia del usuario (como el error en las reglas).
-La IA fue un aliado estratégico que potenció nuestra autonomía como aprendices, permitiéndonos concentrarnos en la lógica y no en la memorización de sintaxis.
+-Cómo medir el tiempo de ejecución con precisión en C++.
+-Cómo diseñar un sistema de historial simple usando arreglos paralelos.
+-La importancia de validar no solo el código, sino también la experiencia del usuario (como el error en las reglas).
+-La IA fue un aliado estratégico que potenció nuestra autonomía como aprendices, permitiéndonos concentrarnos en la lógica y no en la memorización de sintaxis.
 
 Aspectos a mejorar en futuras versiones:
-Corregir las reglas del juego.
-Validar que los índices ingresados estén entre 1 y 6 y no se repitan.
-Reemplazar los arreglos estáticos por archivos o estructuras dinámicas.
-Hacer el código multiplataforma (evitar system("cls")).
+-Corregir las reglas del juego.
+-Validar que los índices ingresados estén entre 1 y 6 y no se repitan.
+-Reemplazar los arreglos estáticos por archivos o estructuras dinámicas.
+-Hacer el código multiplataforma (evitar system("cls")).
 En conclusión, entregamos un proyecto que demuestra dominio competente de las estructuras vistas en clase, uso ético y efectivo de IA, y capacidad de innovación bajo guía docente. Estamos orgullosos del resultado y de lo que aprendimos en el proceso.
+
