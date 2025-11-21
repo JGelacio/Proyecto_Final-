@@ -1,7 +1,7 @@
 #include <iostream>
 #include <locale.h>
-#include <sys/time.h>
-#include <ctime>
+#include <sys/time.h>//para medir tiempo
+#include <ctime> //para medir tiempo
 
 using namespace std;
 
