@@ -1,35 +1,57 @@
 #include <iostream>
 #include <locale.h>
+#include <sys/time.h>
+#include <ctime>
 
 using namespace std;
 
-int main() {
+// Función para calcular la diferencia de tiempo en segundos
+float time_diff(struct timeval *start, struct timeval *end)
+{
+    return (end->tv_sec - start->tv_sec) + 1e-6 * (end->tv_usec - start->tv_usec);
+}
 
-   setlocale(LC_ALL, ""); 
+int main()
+{
+
+    setlocale(LC_ALL, "");
 
     // Declaración de variables
-    int Nmenu, menu=0, puntos1=0, puntos2=0,puntos3=0,puntos4=0,puntos5=0,puntos6=0, R1[6], R2[6], R3[6], R4[6], R5[6], R6[6];
+    int Nmenu, menu = 0, puntos1 = 0, puntos2 = 0, puntos3 = 0, puntos4 = 0, puntos5 = 0, puntos6 = 0, R1[6], R2[6], R3[6], R4[6], R5[6], R6[6];
+    int players[15], i = 0;
+    float time[15];
+    struct timeval start{};
+    struct timeval end{};
 
-    cout<<"**Bienvenido al Juego Orden Correcto**"<<endl<<endl;
+    cout << "**Bienvenido al Juego Orden Correcto**" << endl
+         << endl;
 
-   // Bucle principal del menú
-    while(menu==2||menu==0){
-    Nmenu=0;
+    // Bucle principal del menú
+    while (menu == 2 || menu == 0)
+    {
+        Nmenu = 0;
         // Mostrar el menú y solicitar una opción válida
-        while(Nmenu>3 || Nmenu<1){
-        cout << "Seleccione una opcion del menu: " << endl<<endl;
-        cout << "1. Jugar" << endl;
-        cout << "2. Reglas" << endl;
-        cout << "3. Salir" << endl;
-        cin >> Nmenu;
-        system("cls");
-    }
-    // Procesar la opción seleccionada
-    switch (Nmenu){
+        while (Nmenu > 4 || Nmenu < 1)
+        {
+            cout << "Seleccione una opcion del menu: " << endl
+                 << endl;
+            cout << "1. Jugar" << endl;
+            cout << "2. Reglas" << endl;
+            cout << "3. Puntajes" << endl;
+            cout << "4. Salir" << endl
+                 << endl;
+
+            cin >> Nmenu;
+            system("cls");
+        }
+        // Procesar la opción seleccionada
+        switch (Nmenu)
+        {
         // Opción 1: Jugar
         case 1:
-            menu=1;
-            cout << "Ingresando al juego...."<< endl;
+            gettimeofday(&start, nullptr);
+            menu = 1;
+            cout << "Ingresando al juego...." << endl;
             cout << "Recuerda poner el numero correspondiente a la posicion del indice." << endl;
             system("pause");
             system("cls");
@@ -37,239 +59,307 @@ int main() {
             cout << "**Primer nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
             cout << "1. 4    2. 9    3. 2    4. 7    5. 1    6. 5" << endl;
 
-            for(int i=0; i<6; i++){
-                cout << "Ingrese el numero " << i+1 << ": ";
+            for (int i = 0; i < 6; i++)
+            {
+                cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R1[i];
             }
             // Evaluar respuestas del primer nivel
-            if(R1[0]==2){
+            if (R1[0] == 2)
+            {
                 puntos1++;
             }
-            if(R1[1]==4){
+            if (R1[1] == 4)
+            {
                 puntos1++;
             }
-            if(R1[2]==6){
+            if (R1[2] == 6)
+            {
                 puntos1++;
             }
-            if(R1[3]==1){
+            if (R1[3] == 1)
+            {
                 puntos1++;
             }
-            if(R1[4]==3){
+            if (R1[4] == 3)
+            {
                 puntos1++;
             }
-            if(R1[5]==5){
+            if (R1[5] == 5)
+            {
                 puntos1++;
             }
 
             // Mostrar resultados del primer nivel
             cout << endl;
             cout << "Has terminado el nivel 1!" << endl;
-            cout << "Puntos nivel 1: " << puntos1 << " de 6" << endl<<endl;
+            cout << "Puntos nivel 1: " << puntos1 << " de 6" << endl
+                 << endl;
             system("pause");
             system("cls");
-            
+
             cout << "**Segundo nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
             cout << "1. 15    2. 8    3. 22    4. 3    5. 19    6. 10" << endl;
-            for(int i=0; i<6; i++){
-                cout << "Ingrese el numero " << i+1 << ": ";
+            for (int i = 0; i < 6; i++)
+            {
+                cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R2[i];
             }
             // Evaluar respuestas del segundo nivel
-            if(R2[0]==3){
+            if (R2[0] == 3)
+            {
                 puntos2++;
             }
-            if(R2[1]==5){
+            if (R2[1] == 5)
+            {
                 puntos2++;
             }
-            if(R2[2]==1){
+            if (R2[2] == 1)
+            {
                 puntos2++;
             }
-            if(R2[3]==6){
+            if (R2[3] == 6)
+            {
                 puntos2++;
             }
-            if(R2[4]==2){
+            if (R2[4] == 2)
+            {
                 puntos2++;
             }
-            if(R2[5]==4){
+            if (R2[5] == 4)
+            {
                 puntos2++;
             }
 
             // Mostrar resultados del segundo nivel
             cout << endl;
             cout << "Has terminado el nivel 2!" << endl;
-            cout << "Puntos nivel 2: " << puntos2 << " de 6" << endl<<endl;
+            cout << "Puntos nivel 2: " << puntos2 << " de 6" << endl
+                 << endl;
             system("pause");
             system("cls");
 
             cout << "**Tercer nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
             cout << "1. 30    2. 45    3. 12    4. 28    5. 60    6. 41" << endl;
-            for(int i=0; i<6; i++){
-                cout << "Ingrese el numero " << i+1 << ": ";
+            for (int i = 0; i < 6; i++)
+            {
+                cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R3[i];
             }
             // Evaluar respuestas del tercer nivel
-            if(R3[0]==5){
+            if (R3[0] == 5)
+            {
                 puntos3++;
             }
-            if(R3[1]==2){
+            if (R3[1] == 2)
+            {
                 puntos3++;
             }
-            if(R3[2]==6){
+            if (R3[2] == 6)
+            {
                 puntos3++;
             }
-            if(R3[3]==1){
+            if (R3[3] == 1)
+            {
                 puntos3++;
             }
-            if(R3[4]==4){
+            if (R3[4] == 4)
+            {
                 puntos3++;
             }
-            if(R3[5]==3){
+            if (R3[5] == 3)
+            {
                 puntos3++;
             }
 
             // Mostrar resultados del tercer nivel
             cout << endl;
             cout << "Has terminado el nivel 3!" << endl;
-            cout << "Puntos nivel 3: " << puntos3 << " de 6" << endl<<endl;
+            cout << "Puntos nivel 3: " << puntos3 << " de 6" << endl
+                 << endl;
             system("pause");
             system("cls");
 
             cout << "**Cuarto nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
             cout << "1. 5    2. 100    3. 56    4. 89    5. 73    6. 41" << endl;
-            for(int i=0; i<6; i++){
-                cout << "Ingrese el numero " << i+1 << ": ";
+            for (int i = 0; i < 6; i++)
+            {
+                cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R4[i];
             }
             // Evaluar respuestas del cuarto nivel
-            if(R4[0]==2){
+            if (R4[0] == 2)
+            {
                 puntos4++;
             }
-            if(R4[1]==4){
+            if (R4[1] == 4)
+            {
                 puntos4++;
             }
-            if(R4[2]==5){
+            if (R4[2] == 5)
+            {
                 puntos4++;
             }
-            if(R4[3]==3){
+            if (R4[3] == 3)
+            {
                 puntos4++;
             }
-            if(R4[4]==6){
+            if (R4[4] == 6)
+            {
                 puntos4++;
             }
-            if(R4[5]==1){
+            if (R4[5] == 1)
+            {
                 puntos4++;
             }
 
             // Mostrar resultados del cuarto nivel
             cout << endl;
             cout << "Has terminado el nivel 4!" << endl;
-            cout << "Puntos nivel 4: " << puntos4 << " de 6" <<endl<<endl;
+            cout << "Puntos nivel 4: " << puntos4 << " de 6" << endl
+                 << endl;
             system("pause");
             system("cls");
-            
+
             cout << "**Quinto nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 120    2. 75    3. 99    4. 150    5. 60    6. 135"<< endl;
-            for(int i=0; i<6; i++){
-                cout << "Ingrese el numero " << i+1 << ": ";
+            cout << "1. 120    2. 75    3. 99    4. 150    5. 60    6. 135" << endl;
+            for (int i = 0; i < 6; i++)
+            {
+                cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R5[i];
             }
             // Evaluar respuestas del quinto nivel
-            if(R5[0]==4){
+            if (R5[0] == 4)
+            {
                 puntos5++;
             }
-            if(R5[1]==6){
+            if (R5[1] == 6)
+            {
                 puntos5++;
             }
-            if(R5[2]==1){
+            if (R5[2] == 1)
+            {
                 puntos5++;
             }
-            if(R5[3]==3){
+            if (R5[3] == 3)
+            {
                 puntos5++;
             }
-            if(R5[4]==2){
+            if (R5[4] == 2)
+            {
                 puntos5++;
             }
-            if(R5[5]==5){
+            if (R5[5] == 5)
+            {
                 puntos5++;
             }
 
             // Mostrar resultados del quinto nivel
             cout << endl;
             cout << "Has terminado el nivel 5!" << endl;
-            cout << "Puntos nivel 5: " << puntos5 << " de 6" <<endl<<endl;
+            cout << "Puntos nivel 5: " << puntos5 << " de 6" << endl
+                 << endl;
             system("pause");
             system("cls");
 
             cout << "**Sexto nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 200    2. 350    3. 180    4. 275    5. 400    6. 310"<< endl;
-            for(int i=0; i<6; i++){
-                cout << "Ingrese el numero " << i+1 << ": ";
+            cout << "1. 200    2. 350    3. 180    4. 275    5. 400    6. 310" << endl;
+            for (int i = 0; i < 6; i++)
+            {
+                cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R6[i];
             }
             // Evaluar respuestas del sexto nivel
-            if(R6[0]==5){
+            if (R6[0] == 5)
+            {
                 puntos6++;
             }
-            if(R6[1]==2){
+            if (R6[1] == 2)
+            {
                 puntos6++;
             }
-            if(R6[2]==6){
+            if (R6[2] == 6)
+            {
                 puntos6++;
             }
-            if(R6[3]==4){
+            if (R6[3] == 4)
+            {
                 puntos6++;
             }
-            if(R6[4]==1){
+            if (R6[4] == 1)
+            {
                 puntos6++;
             }
-            if(R6[5]==3){
+            if (R6[5] == 3)
+            {
                 puntos6++;
             }
 
             // Mostrar resultados del sexto nivel
             cout << endl;
             cout << "Has terminado el nivel 6!" << endl;
-            cout << "Puntos nivel 6: " << puntos6 << " de 6" <<endl<<endl;
+            cout << "Puntos nivel 6: " << puntos6 << " de 6" << endl
+                 << endl;
             system("pause");
             system("cls");
-            
+
             // Mostrar resultados finales
-            cout << "**Resultados Finales**" << endl<<endl;
+            cout << "**Resultados Finales**" << endl
+                 << endl;
             cout << "Puntos nivel 1: " << puntos1 << " de 6" << endl;
             cout << "Puntos nivel 2: " << puntos2 << " de 6" << endl;
             cout << "Puntos nivel 3: " << puntos3 << " de 6" << endl;
             cout << "Puntos nivel 4: " << puntos4 << " de 6" << endl;
             cout << "Puntos nivel 5: " << puntos5 << " de 6" << endl;
             cout << "Puntos nivel 6: " << puntos6 << " de 6" << endl;
-            cout << "Puntos Totales: " << puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6 << " de 36" << endl<<endl;
+            cout << "Puntos Totales: " << puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6 << " de 36" << endl
+                 << endl;
             cout << "Regresando al menu principal..." << endl;
             system("pause");
             system("cls");
-            menu=2;
-
+            menu = 2;
+            gettimeofday(&end, nullptr);
+            time[i] = time_diff(&start, &end);
+            players[i++] = puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6;
 
             break;
 
         case 2:
             // Opción 2: Mostrar reglas
-            menu=2;
+            menu = 2;
             cout << "**Reglas del Juego Orden Correcto**" << endl;
             cout << "1. El objetivo del juego es ordenar una serie de numeros en orden ascendente." << endl;
             cout << "2. Se te presentará una lista desordenada de números y debes ingresar el caracter de los numeros en orden." << endl;
             cout << "3. Si ingresas correctamente todos los números en orden, ganaras puntos." << endl;
-            cout << "4. Si cometes un error no se te sumaran puntos." << endl<<endl;
+            cout << "4. Si cometes un error no se te sumaran puntos." << endl
+                 << endl;
             system("pause");
             system("cls");
 
             break;
 
         case 3:
-            // Opción 3: Salir
-            menu=3;
-            cout << "Saliendo del programa..." << endl;
-            
+            // Opción 3: Mostrar puntajes
+            cout << "**Puntajes de los Jugadores**" << endl
+                 << endl;
+
+            for (int j = 0; j < i; j++)
+            {
+                cout << "Jugador " << j + 1 << ": " << players[j] << " puntos" << endl;
+                cout << "Tiempo: " << time[j] << " segundos" << endl
+                     << endl;
+            }
+
+            menu = 2;
+            system("pause");
+            system("cls");
+
             break;
+        case 4:
+            // Opción 4: Salir
+            menu = 7;
+            break;
+        }
     }
-    }
-    return 0; 
+    return 0;
 }
