@@ -142,6 +142,7 @@ int main()
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R3[i];
             }
+
             // Evaluar respuestas del tercer nivel
             if (R3[0] == 60)
             {
@@ -224,6 +225,7 @@ int main()
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R5[i];
             }
+
             // Evaluar respuestas del quinto nivel
             if (R5[0] == 150)
             {
@@ -265,6 +267,7 @@ int main()
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R6[i];
             }
+
             // Evaluar respuestas del sexto nivel
             if (R6[0] == 400)
             {
@@ -326,6 +329,7 @@ int main()
             break;
 
         case 2:
+
             // Opción 2: Mostrar reglas
             menu = 2;
             cout << "**Reglas del Juego Orden Correcto**" << endl;
@@ -340,6 +344,7 @@ int main()
             break;
 
         case 3:
+
             // Opción 3: Mostrar puntajes
             cout << "**Puntajes de los Jugadores**" << endl
                  << endl;
@@ -357,6 +362,7 @@ int main()
 
             break;
         case 4:
+        
             // Opción 4: Salir
             menu = 7;
             break;
