@@ -312,14 +312,19 @@ int main()
             cout << "Puntos nivel 4: " << puntos4 << " de 6" << endl;
             cout << "Puntos nivel 5: " << puntos5 << " de 6" << endl;
             cout << "Puntos nivel 6: " << puntos6 << " de 6" << endl;
-            cout << "Puntos Totales: " << puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6 << " de 36" << endl
-                 << endl;
+            cout << "Puntos Totales: " << puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6 << " de 36" << endl<< endl;
             cout << "Regresando al menu principal..." << endl;
+
             system("pause");
             system("cls");
+
             menu = 2;
+
+            // Medir tiempo final
             gettimeofday(&end, nullptr);
             time[i] = time_diff(&start, &end);
+            
+            // Guardar puntaje del jugador
             players[i++] = puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6;
 
             break;
