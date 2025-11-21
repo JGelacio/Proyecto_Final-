@@ -51,13 +51,9 @@ int main()
         case 1:
             gettimeofday(&start, nullptr);
             menu = 1;
-            cout << "Ingresando al juego...." << endl;
-            cout << "Recuerda poner el numero correspondiente a la posicion del indice." << endl;
-            system("pause");
-            system("cls");
             cout << "Comenzando el juego..." << endl;
             cout << "**Primer nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 4    2. 9    3. 2    4. 7    5. 1    6. 5" << endl;
+            cout << "4    9    2    7    1    5" << endl;
 
             for (int i = 0; i < 6; i++)
             {
@@ -65,27 +61,27 @@ int main()
                 cin >> R1[i];
             }
             // Evaluar respuestas del primer nivel
-            if (R1[0] == 2)
+            if (R1[0] == 9)
             {
                 puntos1++;
             }
-            if (R1[1] == 4)
+            if (R1[1] == 7)
             {
                 puntos1++;
             }
-            if (R1[2] == 6)
+            if (R1[2] == 5)
             {
                 puntos1++;
             }
-            if (R1[3] == 1)
+            if (R1[3] == 4)
             {
                 puntos1++;
             }
-            if (R1[4] == 3)
+            if (R1[4] == 2)
             {
                 puntos1++;
             }
-            if (R1[5] == 5)
+            if (R1[5] == 1)
             {
                 puntos1++;
             }
@@ -99,34 +95,34 @@ int main()
             system("cls");
 
             cout << "**Segundo nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 15    2. 8    3. 22    4. 3    5. 19    6. 10" << endl;
+            cout << "15    8    22    3    19    10" << endl;
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R2[i];
             }
             // Evaluar respuestas del segundo nivel
-            if (R2[0] == 3)
+            if (R2[0] ==22)
             {
                 puntos2++;
             }
-            if (R2[1] == 5)
+            if (R2[1] == 19)
             {
                 puntos2++;
             }
-            if (R2[2] == 1)
+            if (R2[2] == 15)
             {
                 puntos2++;
             }
-            if (R2[3] == 6)
+            if (R2[3] == 10)
             {
                 puntos2++;
             }
-            if (R2[4] == 2)
+            if (R2[4] == 8)
             {
                 puntos2++;
             }
-            if (R2[5] == 4)
+            if (R2[5] == 3)
             {
                 puntos2++;
             }
@@ -140,34 +136,34 @@ int main()
             system("cls");
 
             cout << "**Tercer nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 30    2. 45    3. 12    4. 28    5. 60    6. 41" << endl;
+            cout << "30    45    12    28    60    41" << endl;
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R3[i];
             }
             // Evaluar respuestas del tercer nivel
-            if (R3[0] == 5)
+            if (R3[0] == 60)
             {
                 puntos3++;
             }
-            if (R3[1] == 2)
+            if (R3[1] == 45)
             {
                 puntos3++;
             }
-            if (R3[2] == 6)
+            if (R3[2] == 41)
             {
                 puntos3++;
             }
-            if (R3[3] == 1)
+            if (R3[3] == 30)
             {
                 puntos3++;
             }
-            if (R3[4] == 4)
+            if (R3[4] == 28)
             {
                 puntos3++;
             }
-            if (R3[5] == 3)
+            if (R3[5] == 12)
             {
                 puntos3++;
             }
@@ -181,34 +177,34 @@ int main()
             system("cls");
 
             cout << "**Cuarto nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 5    2. 100    3. 56    4. 89    5. 73    6. 41" << endl;
+            cout << "5    100    56    89    73    41" << endl;
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R4[i];
             }
             // Evaluar respuestas del cuarto nivel
-            if (R4[0] == 2)
+            if (R4[0] == 100)
             {
                 puntos4++;
             }
-            if (R4[1] == 4)
+            if (R4[1] == 89)
             {
                 puntos4++;
             }
-            if (R4[2] == 5)
+            if (R4[2] == 73)
             {
                 puntos4++;
             }
-            if (R4[3] == 3)
+            if (R4[3] == 56)
             {
                 puntos4++;
             }
-            if (R4[4] == 6)
+            if (R4[4] == 41)
             {
                 puntos4++;
             }
-            if (R4[5] == 1)
+            if (R4[5] == 5)
             {
                 puntos4++;
             }
@@ -222,34 +218,34 @@ int main()
             system("cls");
 
             cout << "**Quinto nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 120    2. 75    3. 99    4. 150    5. 60    6. 135" << endl;
+            cout << "120    75    99    150    60    135" << endl;
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R5[i];
             }
             // Evaluar respuestas del quinto nivel
-            if (R5[0] == 4)
+            if (R5[0] == 150)
             {
                 puntos5++;
             }
-            if (R5[1] == 6)
+            if (R5[1] == 135)
             {
                 puntos5++;
             }
-            if (R5[2] == 1)
+            if (R5[2] == 120)
             {
                 puntos5++;
             }
-            if (R5[3] == 3)
+            if (R5[3] == 99)
             {
                 puntos5++;
             }
-            if (R5[4] == 2)
+            if (R5[4] == 75)
             {
                 puntos5++;
             }
-            if (R5[5] == 5)
+            if (R5[5] == 60)
             {
                 puntos5++;
             }
@@ -263,34 +259,34 @@ int main()
             system("cls");
 
             cout << "**Sexto nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
-            cout << "1. 200    2. 350    3. 180    4. 275    5. 400    6. 310" << endl;
+            cout << "200    350    180    275    400    310" << endl;
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R6[i];
             }
             // Evaluar respuestas del sexto nivel
-            if (R6[0] == 5)
+            if (R6[0] == 400)
             {
                 puntos6++;
             }
-            if (R6[1] == 2)
+            if (R6[1] == 350)
             {
                 puntos6++;
             }
-            if (R6[2] == 6)
+            if (R6[2] == 310)
             {
                 puntos6++;
             }
-            if (R6[3] == 4)
+            if (R6[3] == 275)
             {
                 puntos6++;
             }
-            if (R6[4] == 1)
+            if (R6[4] == 200)
             {
                 puntos6++;
             }
-            if (R6[5] == 3)
+            if (R6[5] == 180)
             {
                 puntos6++;
             }
