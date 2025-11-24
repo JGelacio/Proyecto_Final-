@@ -1,7 +1,7 @@
 #include <iostream>
-#include <locale.h>//para tildes
-#include <sys/time.h>//para medir tiempo
-#include <ctime> //para medir tiempo
+#include <locale.h>   //para tildes
+#include <sys/time.h> //para medir tiempo
+#include <ctime>      //para medir tiempo
 
 using namespace std;
 
@@ -55,11 +55,13 @@ int main()
             cout << "**Primer nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
             cout << "4    9    2    7    1    5" << endl;
 
+            // Solicitar respuestas del primer nivel
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R1[i];
             }
+
             // Evaluar respuestas del primer nivel
             if (R1[0] == 9)
             {
@@ -96,13 +98,15 @@ int main()
 
             cout << "**Segundo nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
             cout << "15    8    22    3    19    10" << endl;
+
+            // Solicitar respuestas del segundo nivel
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
                 cin >> R2[i];
             }
             // Evaluar respuestas del segundo nivel
-            if (R2[0] ==22)
+            if (R2[0] == 22)
             {
                 puntos2++;
             }
@@ -137,6 +141,8 @@ int main()
 
             cout << "**Tercer nivel: Ordena los siguientes numeros en orden descendente.**" << endl;
             cout << "30    45    12    28    60    41" << endl;
+
+            // Solicitar respuestas del tercer nivel
             for (int i = 0; i < 6; i++)
             {
                 cout << "Ingrese el numero " << i + 1 << ": ";
@@ -311,7 +317,8 @@ int main()
             cout << "Puntos nivel 4: " << puntos4 << " de 6" << endl;
             cout << "Puntos nivel 5: " << puntos5 << " de 6" << endl;
             cout << "Puntos nivel 6: " << puntos6 << " de 6" << endl;
-            cout << "Puntos Totales: " << puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6 << " de 36" << endl<< endl;
+            cout << "Puntos Totales: " << puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6 << " de 36" << endl
+                 << endl;
             cout << "Regresando al menu principal..." << endl;
 
             system("pause");
@@ -322,7 +329,7 @@ int main()
             // Medir tiempo final
             gettimeofday(&end, nullptr);
             time[i] = time_diff(&start, &end);
-            
+
             // Guardar puntaje del jugador
             players[i++] = puntos1 + puntos2 + puntos3 + puntos4 + puntos5 + puntos6;
 
@@ -336,8 +343,10 @@ int main()
             cout << "1. El objetivo del juego es ordenar una serie de numeros en orden ascendente." << endl;
             cout << "2. Se te presentará una lista desordenada de numeros y debes ingresar el caracter de los numeros en orden." << endl;
             cout << "3. Si ingresas correctamente todos los números en orden, ganaras puntos." << endl;
-            cout << "4. Si cometes un error no se te sumaran puntos." << endl<< endl;
-            cout << "5. Recuerda que mientras más rápido completes el juego, mejor será tu tiempo." << endl<< endl;
+            cout << "4. Si cometes un error no se te sumaran puntos." << endl
+                 << endl;
+            cout << "5. Recuerda que mientras más rápido completes el juego, mejor será tu tiempo." << endl
+                 << endl;
             system("pause");
             system("cls");
 
