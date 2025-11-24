@@ -341,8 +341,8 @@ int main()
             menu = 2;
             cout << "**Reglas del Juego Orden Correcto**" << endl;
             cout << "1. El objetivo del juego es ordenar una serie de numeros en orden ascendente." << endl;
-            cout << "2. Se te presentará una lista desordenada de numeros y debes ingresar el caracter de los numeros en orden." << endl;
-            cout << "3. Si ingresas correctamente todos los números en orden, ganaras puntos." << endl;
+            cout << "2. Se te presentará una lista desordenada de numeros y debes ingresarlos en orden." << endl;
+            cout << "3. Si ingresas correctamente los números en orden, ganaras puntos." << endl;
             cout << "4. Si cometes un error no se te sumaran puntos." << endl
                  << endl;
             cout << "5. Recuerda que mientras más rápido completes el juego, mejor será tu tiempo." << endl
