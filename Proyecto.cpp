@@ -1,5 +1,5 @@
 #include <iostream>
-#include <locale.h>
+#include <locale.h>//para tildes
 #include <sys/time.h>//para medir tiempo
 #include <ctime> //para medir tiempo
 
